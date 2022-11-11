@@ -14,14 +14,14 @@ function getMultipleRandom(arr, num) { // Shuffles the final string of options a
 
 function generatePassword() {
 
-  var pLength = prompt("Pick a Password length, type the number 8 up to 24 ");
+  var pLength = prompt("Pick a Password length, type the number 8 up to 128");
 
-  if (pLength >= 8 && pLength <= 24) { // Makes sure that pLength is acceptable size
+  if (pLength >= 8 && pLength <= 128) { // Makes sure that pLength is acceptable size
     var passArr = []; // Scrambled version of the full array needed
     var totalPassArr = []; // Full array needed
     // Input parameters
     var lCase = confirm("Click OK if you want lowercase letters.");
-    var uCase = confirm("Click OK if you want Uppercase letters.");
+    var uCase = confirm("Click OK if you want uppercase letters.");
     var symbols = confirm("Click OK if you want special symbols.");
     var numbers = confirm("Click OK if you want numeric symbols.");
 
@@ -39,7 +39,11 @@ function generatePassword() {
       if (numbers) {
         totalPassArr = totalPassArr.concat(numbersArr);
       }
-
+      while (pLength > totalPassArr.length){
+      var totalPassArrCopy = totalPassArr; 
+      totalPassArr = totalPassArr.concat(totalPassArrCopy);
+      }
+      
       passArr = getMultipleRandom(totalPassArr, pLength);
       var newPass = passArr.join(''); // Making the array into readable string
       return newPass;
