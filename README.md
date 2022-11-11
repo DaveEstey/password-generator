@@ -14,6 +14,7 @@ N/A
 Press the generate button and complete the desired prompts.
 ![image](https://user-images.githubusercontent.com/114950818/201259783-f741baee-bcad-419c-baf7-882d349efb86.png)
 https://github.com/DaveEstey/password-generator/
+https://daveestey.github.io/password-generator/
 
 
 ## Credits
