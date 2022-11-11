@@ -15,7 +15,7 @@ Press the generate button and complete the desired prompts.
 
 ## Credits
 
-w3schools provided me with the randomizing of the array function.
+w3schools provided me with the shuffling  of the array function.
 
 ## License
 
